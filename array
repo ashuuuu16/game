@@ -1,0 +1,141 @@
+public class twoD_Array {
+    public static void main(String[] args) {
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6}
+        };
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                sum += arr[i][j];
+            }
+        }
+        System.out.println("Sum of 2D array elements = " + sum);
+    }
+}
+
+
+
+summ array
+import java.util.Scanner;
+
+public class sum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of rows: ");
+        int rows = sc.nextInt();
+        System.out.print("Enter number of columns: ");
+        int cols = sc.nextInt();
+        int[][] arr = new int[rows][cols];
+        int sum = 0;
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                arr[i][j] = sc.nextInt();
+                sum += arr[i][j];
+            }
+        }
+        System.out.println("Sum of 2D array elements = " + sum);
+    }
+}
+
+
+diagonal 
+import java.util.Scanner;
+
+public class diag {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter size of square matrix: ");
+        int n = sc.nextInt();
+
+        int[][] arr = new int[n][n];
+
+        System.out.println("Enter elements row by row:");
+        for (int i = 0; i < n; i++) {diag
+            for (int j = 0; j < n; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        int leftSum = 0;
+        int rightSum = 0;
+
+        System.out.print("Left Diagonal: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i][i] + " ");
+            leftSum += arr[i][i];
+        }
+
+        System.out.println();
+
+        System.out.print("Right Diagonal: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i][n - 1 - i] + " ");
+            rightSum += arr[i][n - 1 - i];
+        }
+
+        System.out.println();
+
+        System.out.println("Left Diagonal Sum = " + leftSum);
+        System.out.println("Right Diagonal Sum = " + rightSum);
+        System.out.println("Diagonal Difference = " + Math.abs(leftSum - rightSum));
+    }
+}
+
+
+
+loq
+import java.util.Scanner;
+
+public class loq {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of rows: ");
+        int rows = sc.nextInt();
+
+        System.out.print("Enter number of columns: ");
+        int cols = sc.nextInt();
+
+        int[][] arr = new int[rows][cols];
+
+        System.out.println("Enter elements row by row:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+        int max = arr[0][0];
+        int min = arr[0][0];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+
+                if (arr[i][j] < min) {
+                    min = arr[i][j];
+                }
+            }
+        }
+
+        System.out.println("Highest element = " + max);
+        System.out.println("Lowest element = " + min);
+    }
+}
+
+
+
+
+
+
+
+
+
+
